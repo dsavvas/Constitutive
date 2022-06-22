@@ -1,4 +1,5 @@
 using System;
+
 using MGroup.LinearAlgebra.Matrices;
 using MGroup.LinearAlgebra.Vectors;
 using MGroup.MSolve.Constitutive;
@@ -46,7 +47,7 @@ namespace MGroup.Constitutive.Structural.Continuum
 		/// Updates the material state for a given new strain point.
 		/// </summary>
 		/// <param name="Delta">The given strain point.</param>
-		public double[] UpdateConstitutiveMatrixAndEvaluateResponse(double[] DefGradVec )
+		public double[] UpdateConstitutiveMatrixAndEvaluateResponse(double[] DefGradVec)
 		{
 			var deformationGradient = Matrix.CreateFromArray(new double[3, 3] { { DefGradVec [0], DefGradVec[3], DefGradVec[6] },
 												{ DefGradVec [7], DefGradVec[1], DefGradVec[4] },
